@@ -51,7 +51,7 @@
 		   </tr>
 		   <tr valign="top">
 				<th scope="row">Senha: </th>
-				<td><input type="text" id="senha_instagram" name="senha_instagram" value="<?php echo !empty($options->senha_instagram)  ? $options->senha_instagram:''?>" size="50"/></td>	   
+				<td><input type="password" id="senha_instagram" name="senha_instagram" value="<?php echo !empty($options->senha_instagram)  ? $options->senha_instagram:''?>" size="50"/></td>	   
 		   </tr>
 	   </table>
 	   <div id="msg-login"></div>

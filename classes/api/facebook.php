@@ -14,6 +14,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
+namespace classes\api;
 
 require_once( dirname( __FILE__ ) . '/base_facebook.php' );
 

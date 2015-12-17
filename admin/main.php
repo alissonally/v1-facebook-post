@@ -1,15 +1,15 @@
 <?php 
 
 
-function menu_facebook_post() {
+function menu_social_post() {
     if (function_exists('add_menu_page')) {
-        add_options_page('Configurações Facebook Post ', 'Facebook Post', 'manage_options', 'facebook-post', 'view_facebook_post');
+        add_options_page('Configurações Post ', 'Social Post', 'manage_options', 'social-post', 'view_social_post');
     }
 }
-add_action('admin_menu', 'menu_facebook_post');
+add_action('admin_menu', 'menu_social_post');
 
 
-function view_facebook_post() {
+function view_social_post() {
 	$options = new stdclass();
 	$options->app_secret =  get_option('fbp_app_secret');
 	$options->app_id =  get_option('fbp_app_id');

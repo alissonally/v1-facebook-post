@@ -39,7 +39,7 @@ define('XYZ_FBAP_FB_graph','https://graph.facebook.com/'.XYZ_FBAP_FB_API_VERSION
 define('XYZ_FBAP_FB_graph_video','https://graph-video.facebook.com/'.XYZ_FBAP_FB_API_VERSION.'/');
 define('XYZ_FBAP_FB_www','https://www.facebook.com/'.XYZ_FBAP_FB_API_VERSION.'/');
 
-require_once( dirname( __FILE__ ) . '/api/facebook.php' );
+require_once( dirname( __FILE__ ) . '/classes/api/facebook.php' );
 require_once( dirname( __FILE__ ) . '/classes/instagram/instagram.php' );
 require_once( dirname( __FILE__ ) . '/admin/options_instagram.php' );
 require_once( dirname( __FILE__ ) . '/admin/main.php' );
@@ -71,7 +71,7 @@ function publish_fb_post($id){
         $p = get_post($id);
         $link = get_permalink($id);
         $name = get_the_title($p->ID);
-        $fb= new FBAPFacebook(array(
+        $fb= new classes\api\FBAPFacebook(array(
                 'appId'  => $options->fb_post_token,
                 'secret' => $options->app_secret,
                 'cookie' => true
